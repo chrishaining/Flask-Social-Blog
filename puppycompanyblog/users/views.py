@@ -59,10 +59,10 @@ def logout():
 def account():
     form=UpdateUserForm()
     if form.validate_on_submit():
-        if form.profile_image.data:
+        
+        if form.picture.data:
             username = current_user.username
-            pic = add_profile_pic(form.profile_image.data, username)
-            current_user.profile_image = pic
+            current_user.profile_image = add_profile_image(form.picture.data, username)
 
         current_user.username = form.username.data
         current_user.email = form.email.data
@@ -74,7 +74,7 @@ def account():
         form.username.data = current_user.username
         form.email.data = current_user.email
 
-    profile_image = url_for('static', filename='profile_images/'+current_user.profile_image)
+    profile_image = url_for('static', filename='profile_pics/'+current_user.profile_image)
     return render_template('account.html', profile_image=profile_image, form=form)
 
 ######################
