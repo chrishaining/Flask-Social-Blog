@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h1>Account Details for {{current_user.username}}</h1>
+
+  <img src="{{url_for('static',filename='profile_images/'+current_user.profile_image)}}" alt="{{current_user.username}}">
+  <div class="row">
+
+<!-- in the form, use enctype to update the image -->
+    <form method="POST" action="" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+
+      {{form.username.label }} {{ form.username() }}
+      <br>
+
+      {{form.email.label }} {{ form.email() }}
+      <br>
+
+      {{form.profile_image.label }} {{ form.profile_image() }}
+      <br>
+
+      {{ form.submit() }}
+
+    </form>
+  </div>
+
+</div>
+{% endblock %}
