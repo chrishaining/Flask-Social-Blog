@@ -2,6 +2,11 @@
 
 Project to build a social blog app using Flask. The project is part of the [Python and Flask Bootcamp](https://www.udemy.com/course/python-and-flask-bootcamp-create-websites-using-flask/learn/lecture/11440740#content) course taught by Jose Portilla.
 
+<p>
+  <img src="./puppycompanyblog/static/profile_pics/default_profile.png" title="Fox" alt="A fox is like a puppy" width="400" height="300"/>
+</p>
+
+
 ## About the app
 The premise of the app is for users to create and view blog posts. The theme of the app is puppies (which seems to be a favourite topic of Jose's).
 
