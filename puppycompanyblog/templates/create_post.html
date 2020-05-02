@@ -6,15 +6,20 @@
 
 
 
-  <form class="form-group" method="post">
+  <form class="form-group" method="POST">
 
     {{ form.hidden_tag() }}
 
-    {{ form.title.label }} {{ form.title }}
+    <div class="form-group">
 
-    {{ form.text.label }} {{ form.text }}
 
-    {{ form.submit() }}
+      {{ form.title.label(class="form-control-label") }} {{ form.title(class="form-control form-control-lg") }}
+    </div>
+    {{ form.text.label(class="form-control-label") }} {{ form.text(class="form-control form-control-lg") }}
+
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
 
   </form>
 
