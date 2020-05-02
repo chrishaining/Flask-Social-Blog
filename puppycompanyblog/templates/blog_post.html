@@ -1,22 +1,22 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 
-{% block content%}
+{% block content %}
 
 <div class="container">
   <div class="row">
-    <h1>Title: {{blog_post.title}}</h1>
+    <h1>Title: {{ blog_post.title }}</h1>
   </div>
 
   <div class="row">
-    <h1>Author: {{blog_post.author.username}}</h1>
+    <h1>Author: {{ blog_post.author.username }}</h1>
   </div>
 
   <div class="row">
-    <h1>Date: {{blog_post.date.strftime('%d, %B, %Y')}}</h1>
+    <h1>Date: {{ blog_post.date.strftime('%d, %B, %Y') }}</h1>
   </div>
 
   <div class="row">
-    <p>{{blog_post.text}}</p>
+    <p>{{ blog_post.text }}</p>
   </div>
 
   {% if blog_post.author == current_user %}
@@ -45,8 +45,6 @@
             <form action="{{ url_for('blog_posts.delete_post',blog_post_id=blog_post.id) }}" method="POST">
               <input class="btn btn-danger" type="submit" value="Delete">
             </form>
-
-
           </div>
         </div>
       </div>
@@ -60,4 +58,4 @@
 
 
 
-{% extends block%}
+{% extends block %}

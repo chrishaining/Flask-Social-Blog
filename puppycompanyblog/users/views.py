@@ -59,7 +59,7 @@ def logout():
 def account():
     form=UpdateUserForm()
     if form.validate_on_submit():
-        
+
         if form.picture.data:
             username = current_user.username
             current_user.profile_image = add_profile_image(form.picture.data, username)
@@ -87,4 +87,4 @@ def user_posts(username):
     user = User.query.filter_by(username=username).first_or_404()
     blog_posts = BlogPost.query.filter_by(author=user).order_by(BlogPost.date.desc().paginate(page=page, per_page=5))
 
-    return render_template('user_blog_post.html', blogposts=blogposts, user=user)
+    return render_template('user_blog_posts.html', blogposts=blogposts, user=user)

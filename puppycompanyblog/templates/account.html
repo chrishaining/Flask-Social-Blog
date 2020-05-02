@@ -7,23 +7,32 @@
   <img src="{{url_for('static',filename='profile_pics/'+current_user.profile_image)}}" alt="{{current_user.username}}">
   <div class="row">
 
-<!-- in the form, use enctype to update the image -->
-    <form method="POST" action="" enctype="multipart/form-data">
+    <!-- in the form, use enctype to update the image -->
+    <form class="form-group" method="POST" action="" enctype="multipart/form-data">
       {{ form.hidden_tag() }}
+    </div>
 
-      {{form.username.label }} {{ form.username() }}
+    <div class="form-group">
+      {{form.username.label(class="form-control-label") }} {{ form.username(class="form-control form-control-lg") }}
       <br>
+    </div>
 
-      {{form.email.label }} {{ form.email() }}
+    <div class="form-group">
+      {{form.email.label(class="form-control-label") }} {{ form.email(class="form-control form-control-lg") }}
       <br>
+    </div>
 
-      {{form.picture.label }} {{ form.picture() }}
+    <div class="form-group">
+      {{form.picture.label(class="form-control-label") }} {{ form.picture(class="form-control form-control-file") }}
       <br>
+    </div>
 
-      {{ form.submit() }}
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
 
-    </form>
-  </div>
+  </form>
+</div>
 
 </div>
 {% endblock %}
