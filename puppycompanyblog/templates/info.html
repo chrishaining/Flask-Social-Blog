@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div class="container border bg-light">
 
   <div class="row">
     <br>
   </div>
 
-  <div class="row justify-content-center border bg-light">
+  <div class="row justify-content-center">
     <h1>About our company</h1>
     <p>We love puppies!! We're guessing you love them, too, and so we've created this website for you to share your puppy-related pictures and stories.</p>
-  </div>
-
-  <div class="row">
     <br>
   </div>
 
@@ -26,8 +23,6 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
-
       </ol>
       <div class="carousel-inner" width="600">
         <div class="carousel-item active" data-interval="10000">
@@ -51,9 +46,6 @@
         <div class="carousel-item" data-interval="10000">
           <img src="{{ url_for('static',filename='carousel/pup7.png') }}" class="d-block w-100" alt="pup7">
         </div>
-        <div class="carousel-item" data-interval="10000">
-          <img src="{{ url_for('static',filename='carousel/pup8.png') }}" class="d-block w-100" alt="pup8">
-        </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,6 +57,7 @@
       </a>
     </div>
   </div>
+  <br>
 
 
 
