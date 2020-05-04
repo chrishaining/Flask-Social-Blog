@@ -12,8 +12,61 @@
   </div>
 
   <div class="row">
-    <img src="{{url_for('static',filename='carousel/'+puppy1.png)}}" alt="puppy1" height="300">
+    <br>
   </div>
+
+  <div class="row justify-content-center">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" width="600">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+
+      </ol>
+      <div class="carousel-inner" width="600">
+        <div class="carousel-item active" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup1.png') }}" class="d-block w-100" alt="pup1">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup2.png') }}" class="d-block w-100" alt="pup2">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup3.png') }}" class="d-block w-100" alt="pup3">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup4.png') }}" class="d-block w-100" alt="pup4">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup5.png') }}" class="d-block w-100" alt="pup5">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup6.png') }}" class="d-block w-100" alt="pup6">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup7.png') }}" class="d-block w-100" alt="pup7">
+        </div>
+        <div class="carousel-item" data-interval="10000">
+          <img src="{{ url_for('static',filename='carousel/pup8.png') }}" class="d-block w-100" alt="pup8">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+
 
 </div>
 {% endblock %}
