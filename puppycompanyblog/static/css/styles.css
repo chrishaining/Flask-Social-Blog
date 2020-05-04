@@ -5,3 +5,27 @@
 .home {
   background-image: url('../puppies_home.png')
 } */
+
+
+.modal-dialog {
+  border: solid #0275d8;
+  border-width: thin;
+}
+
+/* .modal-header {
+  display: flex;
+  justify-content: center
+} */
+
+/* .modal-content {
+  justify-content: center
+} */
+
+.modal-header, .modal-footer {
+  background-color: #f7f7f7;
+}
+
+.modal-body {
+  border-top: thin ridged #f7f7f7;
+  border-bottom: thin ridged #f7f7f7;
+}
