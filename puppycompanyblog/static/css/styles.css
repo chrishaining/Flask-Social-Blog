@@ -6,6 +6,9 @@
   background-image: url('../puppies_home.png')
 } */
 
+.homecard {
+  background-color: #f7f7f7
+}
 
 .modal-dialog {
   border: solid #0275d8;
@@ -28,4 +31,8 @@
 .modal-body {
   border-top: thin ridged #f7f7f7;
   border-bottom: thin ridged #f7f7f7;
+}
+
+.form-group {
+  padding: 10px
 }
