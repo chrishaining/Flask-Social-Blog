@@ -17,3 +17,13 @@ def add_profile_image(pic_upload, username):
     pic.save(filepath)
 
     return storage_filename
+
+def show_carousel_image(pic_upload):
+    # filename = pic_upload.filename
+    # ext_type = filename.split('.')[-1]
+    # storage_filename = str(username)+'.'+ext_type
+    filepath = os.path.join(current_app.root_path, 'static/carousel', pic_upload)
+    output_size = (200, 200)
+    pic = Image.open(pic_upload)
+    pic.thumbnail(output_size)
+    pic.save(filepath)

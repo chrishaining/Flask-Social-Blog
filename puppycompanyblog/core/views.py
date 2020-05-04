@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request, Blueprint
-from puppycompanyblog.models import BlogPost
+from puppycompanyblog.models import BlogPost, Photo
+from puppycompanyblog.users.picture_handler import show_carousel_image
+
 
 core = Blueprint('core', __name__)
+# photos = Blueprint('photos', __name__)
 
 @core.route('/')
 def index():
@@ -11,5 +14,10 @@ def index():
 
 @core.route('/info')
 def info():
-
-    return render_template('info.html')
+    photos = Photo.query.all()
+    images = [show_carousel_image(photo.image) for photo in photos]
+    # for photo in photos:
+    #     show_carousel_image(photos)
+    # selected_image = show_carousel_image()
+    # image = url_for('static', filename='carousel/'+current_user.profile_image)
+    return render_template('info.html', photos=photos, images=images)

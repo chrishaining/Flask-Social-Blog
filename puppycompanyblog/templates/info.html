@@ -11,5 +11,13 @@
     <p>We love puppies!! We're guessing you love them, too, and so we've created this website for you to share your puppy-related pictures and stories.</p>
   </div>
 
+  <div class="row justify-content-center">
+    {% for image in images %}
+        <img src="{{url_for('static',filename='carousel/'+image)}}">
+    <!-- {{ show_carousel_image(photo) }} -->
+    {% endfor %}
+  </div>
+
+
 </div>
 {% endblock %}

@@ -54,3 +54,15 @@ class BlogPost(db.Model, UserMixin):
 
     def __repr__(self):
         return f"Post Id: {self.id}. Post title: {self.title}"
+
+################
+### Photo ###
+################
+class Photo(db.Model, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    image = db.Column(db.String(64), nullable = False)
+    title = db.Column(db.String(64), nullable = False)
+
+    def __init__(self, image, title):
+        self.image = image
+        self.title = title
